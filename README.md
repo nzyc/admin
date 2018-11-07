@@ -1,4 +1,4 @@
-# backstage
+# admin
 
 ## Project setup
 ```

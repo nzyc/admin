@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            margin-left: 100px;
+            height: 520px;
+            overflow-y: auto;
+            background-color: #eee;
+        }
+        li {
+            height: 40px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <ul class="boxul">
+        <li>item 001</li>
+        <li>item 002</li>
+        <li>item 003</li>
+        <li>item 004</li>
+        <li>item 005</li>
+        <li>item 006</li>
+        <li>item 007</li>
+        <li>item 008</li>
+        <li>item 009</li>
+        <li>item 010</li>
+        <li>item 011</li>
+        <li>item 012</li>
+        <li class="bottom">item 013</li>
+        <li>item 014</li>
+        <li>item 015</li>
+        <li>item 016</li>
+        <li>item 017</li>
+        <li>item 018</li>
+        <li>item 019</li>
+        <li class="bottom1">item 020</li>
+        <li>item 021</li>
+        <li>item 022</li>
+        <li>item 023</li>
+        <li>item 024</li>
+        <li>item 025</li>
+        <li>item 026</li>
+        <li>item 027</li>
+        <li>item 028</li>
+        <li>item 029</li>
+        <li>item 030</li>
+        <li>item 031</li>
+        <li>item 032</li>
+        <li>item 033</li>
+        <li>item 034</li>
+        <li>item 035</li>
+        <li>item 036</li>
+        <li>item 037</li>
+        <li>item 038</li>
+        <li>item 039</li>
+        <li>item 040</li>
+        <li class="last">item 040</li>
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        var topHeight = $("html").height() - $(window).height() - $(window).scrollTop();
+
+        // topHeight
+        $(".box").scroll(function () {
+            var mixHeight = $(".boxul").height() - $(this).height() - $(this).scrollTop();
+            // console.log(mixHeight)
+            console.log($(this).scrollTop())
+
+        })
+
+        // console.log($(".bottom").offset().top)
+        // console.log($(".bottom1").offset().top- 1120)
+        // console.log($(".last").offset().top - 1120)
+        /*
+        * 380
+        * 500
+        * */
+    })
+</script>
+</body>
+</html>
